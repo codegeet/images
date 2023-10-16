@@ -10,7 +10,7 @@ The [coderunner](https://github.com/codegeet/coderunner) installed inside a Dock
 
 ```bash
 echo '{       
-"language": "JAVA",
+"language_id": "java",
 "files": [{
 "name": "Main.java",
 "content": "class Main {    public static void main(String[] args) {    System.out.print(\"Hello World!!!\"); }   }"
@@ -20,5 +20,5 @@ echo '{
 
 ##### Result
 ```json
-{"stdout":"Hello World!!!","stderr":"","error":""}
+{"std_out":"Hello World!!!","std_err":"","error":""}
 ```
