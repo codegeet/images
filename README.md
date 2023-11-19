@@ -4,7 +4,7 @@
 Docker image to safely run code.
 
 #### Coderunner
-The [coderunner](https://github.com/codegeet/coderunner) installed inside a Docker container compiles and runs the code.
+The [coderunner](https://github.com/codegeet/codegeet/tree/main/coderunner) installed inside a Docker container compiles and runs the code.
 
 ## Example
 
@@ -16,14 +16,20 @@ docker pull codegeet/python:latest
 
 Run code inside a Docker container:
 
+python
 ```bash
 echo '{       
   "language_id": "python",
-  "files": [{
-    "name": "main.py",
-    "content": "print(\"Hello World!!!\")"
-  }]
+  "code": "print(\"Hello World!!!\")"
 }' | docker run --rm -i -u codegeet -w /home/codegeet codegeet/python:latest
+```
+
+java
+```bash
+echo '{                   
+  "language_id": "java",               
+  "code": "class Main {    public static void main(String[] args) {    System.out.print(\"Hello World!!!\"); }   }"
+}' | docker run --rm -i -u codegeet -w /home/codegeet codegeet/base:latest
 ```
 
 ##### Result
