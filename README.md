@@ -8,14 +8,22 @@ The [coderunner](https://github.com/codegeet/coderunner) installed inside a Dock
 
 ## Example
 
+Pull Docker image:
+
+```bash
+docker pull codegeet/python:latest
+```
+
+Run code inside a Docker container:
+
 ```bash
 echo '{       
-"language_id": "java",
-"files": [{
-"name": "Main.java",
-"content": "class Main {    public static void main(String[] args) {    System.out.print(\"Hello World!!!\"); }   }"
-}]
-}' | docker run --rm -i -u codegeet -w /home/codegeet codegeet
+  "language_id": "python",
+  "files": [{
+    "name": "main.py",
+    "content": "print(\"Hello World!!!\")"
+  }]
+}' | docker run --rm -i -u codegeet -w /home/codegeet codegeet/python:latest
 ```
 
 ##### Result
