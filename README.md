@@ -29,7 +29,7 @@ java
 echo '{                   
   "language_id": "java",               
   "code": "class Main {    public static void main(String[] args) {    System.out.print(\"Hello World!!!\"); }   }"
-}' | docker run --rm -i -u codegeet -w /home/codegeet codegeet/base:latest
+}' | docker run --rm -i -u codegeet -w /home/codegeet codegeet/java:latest
 ```
 
 ##### Result
