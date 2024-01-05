@@ -19,7 +19,7 @@ Run code inside a Docker container:
 python
 ```bash
 echo '{       
-  "language_id": "python",
+  "language": "python",
   "code": "print(\"Hello World!!!\")"
 }' | docker run --rm -i -u codegeet -w /home/codegeet codegeet/python:latest
 ```
@@ -27,7 +27,7 @@ echo '{
 java
 ```bash
 echo '{                   
-  "language_id": "java",               
+  "language": "java",               
   "code": "class Main {    public static void main(String[] args) {    System.out.print(\"Hello World!!!\"); }   }"
 }' | docker run --rm -i -u codegeet -w /home/codegeet codegeet/java:latest
 ```
